@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'YOUR_GITHUB_REPO_URL'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t flask-app .'
